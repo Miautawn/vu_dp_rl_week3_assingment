@@ -1,4 +1,4 @@
-# VU "Dynamic Programming and Reinforcement Learning" Week 2 Assingment
+# VU "Dynamic Programming and Reinforcement Learning" Week 3 Assingment
 
 ## Setup
 This repository uses [pyenv](https://github.com/pyenv/pyenv) and [poetry](https://github.com/python-poetry/poetry) for python version and dependency management. Follow thei individual instructions to set them up.
