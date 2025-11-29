@@ -13,6 +13,7 @@ plotly = "^6.4.0"
 kaleido = "^1.2.0"
 pandas = "^2.3.3"
 nbformat = "^5.10.4"
+tqdm = "^4.67.1"
 
 
 [build-system]

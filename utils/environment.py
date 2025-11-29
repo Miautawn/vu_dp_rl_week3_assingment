@@ -1,17 +1,22 @@
-import random
-
 import numpy as np
 
 
 class TicTacToeEnv:
-    def __init__(self, seed=42):
-        # 0 = Empty, 1 = Player 'O' (You), -1 = Opponent 'X' (Random)
-        self.rng = np.random.default_rng(seed)
+    def __init__(self, rng, board: np.ndarray = None):
+        self.rng = rng
 
-        self.board = np.zeros((3, 3), dtype=int)
-        self.done = False
-
-        self.reset()
+        if board is not None:
+            # OPTIMIZATION: Load existing state
+            # we use np.array() to:
+            # Ensure it is a numpy array (in case we pass the tuple key)
+            # Ensure that we copy the state
+            self.board = np.array(board, dtype=int)
+            is_over, _ = self.check_status()
+            self.done = is_over
+        else:
+            self.board = np.zeros((3, 3), dtype=int)
+            self.done = False
+            self.reset()
 
     def reset(self):
         """

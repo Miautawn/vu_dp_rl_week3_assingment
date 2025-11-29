@@ -20,4 +20,4 @@ pre-commit install
 ```
 
 ## How to run
-Once the `setup` is complete, you can simply ...
+Once the `setup` is complete, you can simply run the `main.ipynb` notebook to generate the reported insights and artifacts!
