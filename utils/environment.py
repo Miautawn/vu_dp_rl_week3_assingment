@@ -53,7 +53,7 @@ class TicTacToeEnv:
         if -3 in sums:
             return True, 0.0  # Bot wins
         if 0 not in self.board:
-            return True, 0.0  # Draw
+            return True, 0.5  # Draw
 
         return False, 0.0  # Game is not over
 
